@@ -10,19 +10,31 @@ public class StringCalculatorTest {
     }
 
     @Test
-    public void returnTheSumOfNumbersWhenAStringSeparatedByCommaIsPassed() {
+    public void returnTheSameNumberWhenANumberIsPassedAsString() {
         StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(25, stringCalculator.add("1,2,10,12"));
+        assertEquals(13, stringCalculator.add("13"));
     }
 
     @Test
-    public void returnTheSumOfNumbersAndIgnoreInitWhenAStringSeparatedByCommaIsPassed() {
+    public void returnTheSumWhenAStringOfTwoNumbersSeparatedByCommaIsPassed() {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(12, stringCalculator.add("7,5"));
+    }
+
+    @Test
+    public void returnTheSumOfNumbersAndIgnoreEmptyValueInInitOfStringSeparatedByComma() {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(7, stringCalculator.add(",5,2"));
     }
 
     @Test
-    public void returnTheSumOfNumbersAndIgnoreEndWhenAStringSeparatedByCommaIsPassed() {
+    public void returnTheSumOfNumbersAndIgnoreEmptyValueInMiddleOfStringSeparatedByComma() {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(8, stringCalculator.add("1,5,,2"));
+    }
+
+    @Test
+    public void returnTheSumOfNumbersAndIgnoreEmptyValueInEndOfStringSeparatedByComma() {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(5, stringCalculator.add("3,2,"));
     }

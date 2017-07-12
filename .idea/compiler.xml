@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="KataStringCalculator" />
         <module name="StringCalculator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="KataStringCalculator" target="1.5" />
       <module name="StringCalculator" target="1.5" />
     </bytecodeTargetLevel>
   </component>

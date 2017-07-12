@@ -10,7 +10,9 @@ public class StringCalculator {
         String[] split = numbers.split(",");
 
         for(String stringNumber : split) {
-            sum += Integer.parseInt(stringNumber);
+            if(stringNumber.isEmpty() == false) {
+                sum += Integer.parseInt(stringNumber);
+            }
         }
 
         return sum;
